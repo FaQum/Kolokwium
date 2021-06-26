@@ -5,7 +5,7 @@ public abstract class Vehicle {
     String vinNumber;
     String color;
     Double price;
-    String combustion;
+    Double combustion;
     Double tankCondition;
     Double mileageCounter;
 
@@ -15,5 +15,9 @@ public abstract class Vehicle {
 
     public void drive() {
         System.out.println("Jedź");
+    }
+
+    public void range() {
+        double range = tankCondition / combustion;
     }
 }
