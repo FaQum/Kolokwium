@@ -8,4 +8,12 @@ public abstract class Vehicle {
     String combustion;
     Double tankCondition;
     Double mileageCounter;
+
+    public void refuel() {
+        System.out.println("Zatankuj");
+    }
+
+    public void drive() {
+        System.out.println("Jedź");
+    }
 }
