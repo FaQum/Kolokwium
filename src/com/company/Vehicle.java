@@ -9,12 +9,12 @@ public abstract class Vehicle {
     Double tankCondition;
     Double mileageCounter;
 
-    public void refuel() {
-        System.out.println("Zatankuj");
+    public double refuel(Double fuel) {
+        return tankCondition - fuel;
     }
 
-    public void drive() {
-        System.out.println("Jedź");
+    public void drive(Double kilometers, Double range) {
+
     }
 
     public void range() {
