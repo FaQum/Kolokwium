@@ -7,10 +7,17 @@ public abstract class Vehicle {
     Double price;
     Double combustion;
     Double tankCondition;
+    Double tankCapacity;
     Double mileageCounter;
 
-    public double refuel(Double fuel) {
-        return tankCondition - fuel;
+    public void refuel(Double tankCondition, Double fuelAmount, Double tankCapacity) {
+        if(tankCondition + fuelAmount > tankCapacity) {
+            tankCondition = tankCapacity;
+            System.out.println("Nie można zatankować więcej niż pojemność zbiornika");
+        } else if(tankCondition + fuelAmount <= tankCapacity) {
+            tankCondition = tankCondition + fuelAmount;
+            System.out.println("Paliwo zostało zatankowane");
+        }
     }
 
     public void drive(Double kilometers, Double range) {
