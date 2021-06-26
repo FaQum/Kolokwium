@@ -27,4 +27,10 @@ public abstract class Vehicle {
     public void range() {
         double range = tankCondition / combustion;
     }
+
+    public void changeColor(String finalColor) {
+        color = finalColor;
+        price = price+0.05 * price;
+        System.out.println(price);
+    }
 }
